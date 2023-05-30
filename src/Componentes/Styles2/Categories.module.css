@@ -1,0 +1,38 @@
+.container-categories__categories{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5px;
+
+}
+.container-categories--img{
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: aquamarine;
+}
+.container-categories--img img{
+    width: 100%;
+    height: auto;
+
+}
+.container-categories--name{
+    position: absolute;
+    top: 0;
+    background-color: rgb(0, 0, 255,0.5);
+    font-size: 2rem;
+    padding: 0 50px;
+    width: 85%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    transition: transform .5s;
+    transform: scale(0);
+}
+.container-categories--img:hover .container-categories--name {
+    cursor: pointer;
+    transform: scale(1);
+
+}

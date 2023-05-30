@@ -1,0 +1,58 @@
+.ul-list{
+    margin: 0;
+    background-color:grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.il-list{
+    list-style: none;
+    background-color: grey;
+    padding: 5px 20px;  
+    position: relative;
+}
+.il-list:hover{
+    background-color: white;
+    color: black;
+}
+
+.il-list h3{
+    color: rgb(85, 25, 25);
+    list-style: none; 
+}
+.il-list h3:hover{
+    
+    text-decoration: underline;
+}
+
+.il-list--img{
+    width: 50px;
+    padding: 0 40px 0 20px;
+}
+.il-list ul{
+    padding: 0;
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: black;
+    display: none;
+}
+
+.il-list:hover > ul{
+    display: initial;
+}
+
+.il-list ul li {
+    padding: 10px 30px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+
+}
+
+.carrito{
+    margin: 0 50px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
