@@ -1,0 +1,72 @@
+:root{
+    --color10:#BF506E;
+    --color7:#DF7B67;
+}
+
+.contenedor__formulario{
+    background-color:rgb(223, 123, 103,0.2);
+    width: 30%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    text-align: center;
+    padding: 50px;
+
+}
+.Inputs{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px 10px 10px;
+    font-size: 1.5rem;
+    color: var(--color10);
+    font-weight: bold;
+}
+.Inputs input{
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(0, 0, 0,0.2);
+    border: none;
+    border-radius: 20px;
+    color: var(--color10);
+    text-align: center; 
+}
+.Inputs input::placeholder {
+    text-align: center;
+    font-family: kanit;
+    font-size: 1rem;
+    font-weight: 200;
+}
+.Inputs input:hover{
+    cursor: pointer;
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 15px;
+}
+.btns button{
+    width: 200px;
+    padding: 10px 0;
+    background-color: var(--color10);
+    color: rgb(249, 195, 195);
+    border: none;
+    border-radius: 10px;
+    font-family: kanit;
+    font-size: 1rem;
+    font-weight: 200;
+}
+.btns button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    color: white;
+}
+.link {
+    color: var(--color10);
+}

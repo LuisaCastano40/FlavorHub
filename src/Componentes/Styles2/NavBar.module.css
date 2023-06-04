@@ -1,53 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;1,400&family=Inter:wght@200;300;400;500;600&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Montserrat:wght@100;800&family=Poltawski+Nowy:ital,wght@0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;1,400&family=Inter:wght@200;300;400;500;600&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Montserrat:wght@100;800&family=Oswald:wght@200;300;400&family=Poltawski+Nowy:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root{
+    --color1:rgb(89, 4, 36);
+    --color2:#D6D4E0;
+    --color3:white;
+    --color4:#B6DCE3;
+    --color5:#F8F8D7;
+    --color6:#85C6A3;
+    --color7:#DF7B67;
+}
+.contenedor__navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color2);
+    margin-top: 20px;
+    padding: 0 80px;
+    /*position: fixed;*/
+    z-index: 1000;
+}
+.NavBar--Logo {
+    margin: 10px;
+    padding: 5px 30px;
+    border: solid var(--color1);
+}
+.NavBar--Logo h2{
+    padding: 0;
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+    font-size: 2rem;
+    color: var(--color1);
+}
+.link{
+    text-decoration: none;
+}
+.links h3 span:hover{
+    text-decoration: underline;
+}
 .ul-list{
     margin: 0;
-    background-color:grey;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    justify-content: space-evenly;
 }
 
 .il-list{
     list-style: none;
-    background-color: grey;
     padding: 5px 20px;  
     position: relative;
+    font-family: 'Oswald';
+    font-weight: 100;
 }
 .il-list:hover{
     background-color: white;
-    color: black;
+    color: var(--color1);
 }
 
 .il-list h3{
-    color: rgb(85, 25, 25);
+    color: var(--color1);
     list-style: none; 
-}
-.il-list h3:hover{
-    
-    text-decoration: underline;
 }
 
 .il-list--img{
     width: 50px;
-    padding: 0 40px 0 20px;
+    padding: 0 0px 0 20px;
 }
 .il-list ul{
     padding: 0;
     position: absolute;
     left: 0;
     width: 200px;
-    background-color: black;
     display: none;
+    background-color: var(--color2);
 }
 
 .il-list:hover > ul{
     display: initial;
+    z-index: 2;
 }
 
 .il-list ul li {
     padding: 10px 30px;
-    border-top: 1px solid rgba(0,0,0,0.1);
-
+    border-top: 1px solid var(--color1);
+}
+.links{
+    text-decoration: none;
 }
 
 .carrito{
@@ -55,4 +96,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
+    border: none;
+}
+.carrito:hover{
+    cursor: pointer;
+}
+.carrito img{
+    width: 60px;
 }

@@ -1,6 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;1,400&family=Inter:wght@200;300;400;500;600&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Montserrat:wght@100;800&family=Poltawski+Nowy:ital,wght@0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;1,400&family=Inter:wght@200;300;400;500;600&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Montserrat:wght@100;800&family=Oswald:wght@200;300;400&family=Poltawski+Nowy:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root{
+    --color1:#590424;
+    --color2:#D6D4E0;
+    --color3:white;
+    --color4:#B6DCE3;
+    --color5:#F8F8D7;
+    --color6:#85C6A3;
+    --color7:#DF7B67;
+}
+
+.images{
+    width: 100px;
+    border: 2px solid var(--color1);
+}
+.images:hover{
+    cursor: pointer;
+    width: 120px;
+    background-color: hwb(337 2% 65% / 0.836);
+}
 .footer__icons{
-    background-color: aqua;
+    background-color: var(--color2);
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    gap: 70px;
 }
 .footer__sentence{
-    background-color: blueviolet;
+    text-align: center;
+    font-family: 'Oswald';
+    color: var(--color1);
+    font-size: 2rem;
+    background-color: var(--color3);
+    padding: 40px 20px;
+}
+.footer__sentence strong{
+    color: var(--color7);
+}
+.footer__copy{
+    background-color: var(--color2);
+    text-align: center;
+    padding: 50px;
+    font-family: 'Oswald';
+    font-size: 25px;
 }

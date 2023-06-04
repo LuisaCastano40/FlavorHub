@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom"
 import Styles from "./Styles2/Baner.module.css"
 import { useState, useEffect } from "react"
-/* import img1 from "../assets/banner-images/salty.png"
-import img2 from "../assets/banner-images/drinks.png"
-import img3 from "../assets/banner-images/sweety.png" */
+import img1 from "../assets/Icons/arrow-d.png"
+import img2 from "../assets/Icons/arrow-i.png"
 
 
 export function Baner({imges}) {
@@ -31,10 +30,6 @@ export function Baner({imges}) {
     }
   }
 
-  /* let i=0;
-  const span = ([i]) =>{
-    return (imges[i])
-  } */
 
   return (
     <>  
@@ -49,16 +44,11 @@ export function Baner({imges}) {
           })}
 
       <article className={Styles["container-Baner__arrows"]}>
-            <button onClick={prevImg} className={Styles["arrow--left"]}>I</button>
-            <button onClick={nextImg} className={Styles["arrow--right"]}>D</button>
+            <button onClick={prevImg} className={Styles["arrow--left"]}> <img src={img2} alt="Izq" /> </button>
+            <button onClick={nextImg} className={Styles["arrow--right"]}> <img src={img1} alt="Izq" /> </button>
       </article>
   
     </section>
-      {/* <article className={Styles["container-Baner__sliders"]}>
-        <button >1</button>
-        <button >1</button>
-        <button >1</button>
-      </article> */}
       
       
     </>

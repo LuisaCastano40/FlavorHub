@@ -1,0 +1,32 @@
+:root{
+    --color10:#BF506E;
+    --color7:#DF7B67;
+}
+.contenedor__signup{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    overflow: hidden;
+    font-family: 'Kanit', sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    padding: 50px 0;
+
+}
+.top, .bottom{
+    height: 100px;
+    background-color: var(--color10);
+}
+.contenedor__signup h1{
+    color: var(--color10);
+    font-size: 2.5rem;
+    margin: 0;
+
+}
+.contenedor__signup h1 span{
+    color: var(--color1);
+}

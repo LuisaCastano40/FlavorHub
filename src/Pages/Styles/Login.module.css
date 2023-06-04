@@ -1,0 +1,31 @@
+:root{
+    --color8:#1585AC;
+    --color4:#B6DCE3;
+}
+.contenedor__login{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    overflow: hidden;
+    font-family: 'Kanit', sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    padding: 50px 0;
+}
+.top, .bottom{
+    height: 100px;
+    background-color: var(--color8);
+}
+.contenedor__login h1{
+color: var(--color8);
+font-size: 2.5rem;
+padding: 5px 30px;
+border-radius: 20px;
+}
+.contenedor__login h1 span{
+    color: var(--color1);
+}
