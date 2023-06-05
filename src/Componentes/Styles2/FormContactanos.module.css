@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital@1&family=Kanit:wght@800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;1,400&family=Inter:wght@200;300;400;500;600&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Montserrat:wght@100;800&family=Poltawski+Nowy:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root{
+    --color1:#590424;
+    --color2:#D6D4E0;
+    --color3:white;
+    --color4:#B6DCE3;
+    --color5:#F8F8D7;
+    --color6:#85C6A3;
+    --color7:#DF7B67;
+    --color8:#1585AC;
+    --color9:#9B6612;
+    --color10:#BF506E;
+}
+.contenedor__formulario{
+    background-color: var(--color4);
+}
+.contenedor-encabezado{
+    text-align: center;
+    margin: 0;
+}
+.titulo{
+    font-family: 'Kanit', sans-serif;
+    color: var(--color8);
+    font-size: 3.2rem;
+    font-style: italic;
+    line-height: 83px;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.contenedor-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px;
+}
+
+.Inputs{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.Inputs label{
+    font-family: 'oswald', sans-serif;
+    color: var(--color8);
+    font-size: 1.3rem;
+    padding: 0 5px 5px 5px;
+}
+.Inputs input, textarea{
+    width: 300px;
+    padding: 5px;
+    border-radius: 30px;
+    border-color: var(--color8);
+}
+.Inputs textarea{
+    height: 150px;
+}
+.Inputs input::placeholder, textarea::placeholder{
+    text-align: center;
+}
+.contenedor-form button{
+    background-color: var(--color8);
+}
+.btn{
+    
+    color: var(--color4);
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+.btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    color: var(--color3);
+}

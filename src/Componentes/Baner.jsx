@@ -37,8 +37,8 @@ export function Baner({imges}) {
       
         {imges.map ((img,index)=>{
           return (
-            <article className={Styles["container-Baner__images"]}>
-              {imgActual == index &&(<img key={index} src={img} alt="img-Baner"/>)}
+            <article className={Styles["container-Baner__images"]} key={index}>
+              {imgActual == index &&(<img src={img} alt="img-Baner"/>)}
             </article>
           )
           })}

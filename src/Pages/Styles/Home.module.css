@@ -22,6 +22,7 @@ body{
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 header{
     margin: 0px;
@@ -33,9 +34,6 @@ header{
 }
 
 /*Sección de barra de navegación*/
-.NavBar{
-    
-}
 
 /*Sección de marca*/
 

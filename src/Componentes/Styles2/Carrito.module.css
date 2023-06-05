@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital@1&family=Kanit:wght@800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;1,400&family=Inter:wght@200;300;400;500;600&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Montserrat:wght@100;800&family=Poltawski+Nowy:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root{
+    --color1:#590424;
+    --color2:#D6D4E0;
+    --color3:white;
+    --color4:#B6DCE3;
+    --color5:#F8F8D7;
+    --color6:#85C6A3;
+    --color7:#DF7B67;
+    --color8:#1585AC;
+    --color9:#9B6612;
+    --color10:#BF506E;
+}
+
+
 .contenedor__carrito{
     position: fixed;
     top:0;
@@ -16,7 +34,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* scale: (0.5); */
     width: 80%;
     height: 80%;
     background-color: white;
@@ -48,12 +65,12 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    /* scale: (0.5); */
     width: 80%;
     height: 80%;
     background-color: white;
     border-radius: 20px;
     overflow-x: scroll;
+    scroll-behavior: smooth;
     transition: all 300ms ease-in-out;
     visibility: visible;
     transform: translate(-50%,-50%);
@@ -64,12 +81,19 @@
     display: none;
 }
 .carrito__vacío_show{
+    font-family: 'oswald', sans-serif;
+    color: var(--color10);
     display: block;
     text-align: center;
-    font-size: 1.5rem;
-    padding: 0px 50px;
-    color: crimson;
+    font-size: 1.6rem;
+    padding: 0px 100px;
 
+}
+.titulo, .titulo2{
+    font-family: 'Kanit', sans-serif;
+    color: var(--color1);
+    font-size: 2.3rem;
+    font-style: italic;
 }
 .carrito__close box-icon{
     display: inline-block;
@@ -80,12 +104,11 @@
     margin: 2rem 0 0 2rem;
 }
 .carrito__close box-icon:hover{
-    fill: crimson;
+    fill: var(--color1);
 }
 .carrito__center{
     width: 90%;
     margin: 0 auto;
-    border: 1px solid salmon;
 }
 .carrito__item{
     display: grid;
@@ -108,13 +131,14 @@
     font-size: 1.5rem;
 }
 .carrito__item .price{
-    color: brown;
+    font-family: 'oswald', sans-serif;
+    color: var(--color10);
     font-size: 1.6rem;
     font-weight: bold;
     text-align: center;
 }
 .carrito__item box-icon{
-    fill:rgb(167, 220, 20);
+    fill:var(--color10);
     width: 35px;
     height: 35px;
     cursor: pointer;
@@ -129,7 +153,7 @@
 }
 .carrito__item .remove__item box-icon{
     width: 40px;
-    fill: blue;
+    fill: var(--color1);
     margin: 0;
 }
 .carrito__footer{
@@ -140,18 +164,23 @@
     font-size: 2rem;
     font-weight: 700;   
 }
+
 .carrito__footer .btn{
     display: inline-block;
     padding: 0.3rem 1rem;
     font-size: 1rem;
-    background-color: brown;
+    background-color: var(--color1);
     border: 0;
     outline: 0;
     cursor: pointer;
-    color: white;
+    color: var(--color3);
+    padding: 15px 40px;
+    border-radius: 30px;
 }
 .carrito__footer .btn:hover{
-    background-color: crimson;
+    background-color: var(--color3);
+    border: solid var(--color1);
+    color: var(--color1);
     transform: scale(1.2);
 }
 

@@ -13,7 +13,6 @@ export function SaltyProducts() {
 
   return (
     <>
-    <DataProvider> 
       <header>
         <NavBar/>
         <Carrito/>
@@ -26,7 +25,6 @@ export function SaltyProducts() {
       <footer>
         <Footer/>
       </footer>
-    </DataProvider>
     </>
   )
 }

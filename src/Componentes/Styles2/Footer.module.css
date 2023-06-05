@@ -11,14 +11,19 @@
     --color7:#DF7B67;
 }
 
-.images{
+.footer--icon box-icon{
+    fill: var(--color1);
     width: 100px;
+    height: 100px;
     border: 2px solid var(--color1);
+    border-radius: 10px;
 }
-.images:hover{
+.footer--icon box-icon:hover{
+    fill: var(--color3);
     cursor: pointer;
     width: 120px;
     background-color: hwb(337 2% 65% / 0.836);
+    border-color: var(--color3);
 }
 .footer__icons{
     background-color: var(--color2);

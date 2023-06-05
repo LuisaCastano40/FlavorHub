@@ -28,6 +28,8 @@
     font-family: 'Kanit', sans-serif;
     color: var(--color1);
     font-size: 3.2rem;
+    font-style: italic;
+    line-height: 83px;
 }
 .container-categories--img{
     position: relative;

@@ -1,25 +1,20 @@
 import Styles from "./Styles2/Salty.module.css"
 import { useContext, useState, useEffect } from "react";
 import { DataContext } from "../Context/Dataprovider";
-
+import icon from "../assets/Icons/carrito1.png"
 
 
 export function Salty() {
 
-    //  const [id,setId] = useState([]);
-
     const [productSalty,setProductSalty] = useState([]);
-
     const value = useContext(DataContext);
     const [productos] = value.productos;
-   // const [carrito] = value.productos;
-    console.log(productos);
     const addCarrito = value.addCarrito;
+    const isloggedin = localStorage.getItem('isLoggedIn');
 
     useEffect(()=>{
         const elementos = productos.filter((e)=>e.id<=3);
         setProductSalty(elementos);
-        console.log(productSalty);
     },[productos])
 
   return (
@@ -36,8 +31,8 @@ export function Salty() {
                     </article>
 
                     <article  className={Styles["container_carrito"]}>
-                        <h3>${productS.precio}</h3>
-                        <button onClick={() => addCarrito(productS.id)}>Agregar</button>
+                        <h3>${productS.precio} K</h3>
+                        {isloggedin ? <button onClick={() => addCarrito(productS.id)}> <img src={icon} alt="icon" /> </button> : <></>}  
                     </article>
                 </section>
             ))}      

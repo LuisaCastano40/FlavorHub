@@ -16,28 +16,28 @@ import img9 from "../assets/sweety/sweet4.png"
 export const Data = [
     {
         id:1,
-        precio:80,
+        precio:30,
         nombre:"Croissants de la Reina", 
         url:img1,
         cantidad:1
     },
     {
         id:2,
-        precio:90,
+        precio:20,
         nombre:"Brioche de la Reina", 
         url:img2,
         cantidad:1
     },
     {
         id:3,
-        precio:100,
+        precio:40,
         nombre:"Vol-au-vents de la Reina", 
         url:img3,
         cantidad:1
     },
     {
         id:4,
-        precio:50,
+        precio:30,
         nombre:"Lily of Versailles", 
         url:img4,
         cantidad:1
@@ -51,28 +51,28 @@ export const Data = [
     },
     {
         id:6,
-        precio:50,
+        precio:40,
         nombre:"Marie Antoinette's Delight", 
         url:img6,
         cantidad:1
     },
     {
         id:7,
-        precio:50,
+        precio:30,
         nombre:"Macarons de la Realeza", 
         url:img7,
         cantidad:1
     },
     {
         id:8,
-        precio:60,
+        precio:30,
         nombre:"Tartelette Versailles", 
         url:img8,
         cantidad:1
     },
     {
         id:9,
-        precio:80,
+        precio:40,
         nombre:"Crème Brûlée Royale", 
         url:img9,
         cantidad:1

@@ -1,48 +1,25 @@
 import {Link} from "react-router-dom"
+import {useState} from 'react';
+
 import Styles from "./Styles2/FormularioRegistro.module.css"
-import React, {useState} from 'react';
-import { useNavigate } from 'react-router-dom';
-import {  createUserWithEmailAndPassword  } from 'firebase/auth';
-import { FirebaseAuth } from '../Firebase/Config';
+//context
+import { useAuth } from "../Context/Auth";
 
 export function FormularioRegistro() {
-        const navigate = useNavigate();
- 
+        
+        const auth = useAuth();
         const [email, setEmail] = useState('')
         const [password, setPassword] = useState('');
-     
-        const onSubmit = async (e) => {
-          e.preventDefault()
-         
-          await createUserWithEmailAndPassword(FirebaseAuth, email, password)
-            .then((userCredential) => {
-                // Signed in
-                const user = userCredential.user;
-                console.log(user);
-                navigate("/login")
-                // ...
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorCode, errorMessage);
-                // ..
-            });
-     
-       
+        
+        const handleRegister = (e) => {
+          e.preventDefault();
+          auth.signup(email,password)
         }
+     
   return (
     <>
     <section className={Styles["contenedor__formulario"]}>
         <form action="">
-            <section className={Styles["Inputs"]}>
-              <label htmlFor="Nombre-Completo">Nombre Completo</label>
-              <input  id="full-name" 
-                      name="namel" 
-                      type="text" 
-                      required 
-                      placeholder="Ingrese su Nombre Completo"/>
-            </section>
             <section className={Styles["Inputs"]}>
               <label htmlFor="email-address">Correo electrónico</label>
               <input  id="email-address" 
@@ -62,7 +39,7 @@ export function FormularioRegistro() {
                       onChange={(e) => setPassword(e.target.value)} />
             </section>
             <section className={Styles["btns"]}>
-              <button type="submit" onClick={onSubmit}>Registrate</button>
+              <button type="submit" onClick={(e)=>{handleRegister(e)}} >Registrate</button>
             </section>   
         </form>        
     </section>

@@ -1,34 +1,39 @@
 import Styles from "./Styles2/FormularioIngreso.module.css"
-import React, {useState} from 'react';
-import {  signInWithEmailAndPassword   } from 'firebase/auth';
-import { FirebaseAuth } from '../Firebase/Config';
-import { useNavigate } from 'react-router-dom'
+import {useEffect, useState} from 'react';
 import {Link} from "react-router-dom"
+import { useNavigate} from 'react-router-dom';
+
+//context
+import { useAuth } from "../Context/Auth";
 
 export function FormularioIngreso() {
-  const navigate = useNavigate();
+
+  const auth = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const isloggedin = localStorage.getItem('isLoggedIn');
+  const navigate = useNavigate();
      
-  const onLogin = (e) => {
-      e.preventDefault();
-      signInWithEmailAndPassword(FirebaseAuth, email, password)
-          .then((userCredential) => {
-              // Signed in
-              const user = userCredential.user;
-              localStorage.setItem("isLoggedIn", "true")
-              localStorage.setItem("accessToken", user["accessToken"])
-              localStorage.setItem("email", user["email"])
-              console.log(user)
-              navigate("/Homepage")
-
-
-          }).catch((error) => {
-              const errorCode = error.code;
-              const errorMessage = error.message;
-              console.log(errorCode, errorMessage)
-          });
+  const handleLogin = (e) => {
+    e.preventDefault();
+    auth.login(email,password);
   }
+  const handleGoogle = (e) => {
+    try{
+      e.preventDefault();
+      auth.loginWithGoogle();
+    }catch(error){
+      console.log(error);
+    }
+  }
+  useEffect (()=>{
+    if(isloggedin){
+      navigate("/")
+    }else{
+      console.log("registrate")
+    }
+  })
+
   return (
     <>
       <section className={Styles["contenedor__formulario"]}>
@@ -46,14 +51,14 @@ export function FormularioIngreso() {
                 <label htmlFor="password">Contraseña</label>
                 <input  id="password"
                         name="password"
-                        type="password"                                    
+                        type="password"     
                         required 
                         placeholder="Ingrese su contraseña"
                         onChange={(e) => setPassword(e.target.value)}/>
               </section>
               <section className={Styles["btns"]}>
-                <button onClick={onLogin}>Ingresar</button>
-                <button>Ingresar con Google</button>
+                <button onClick={(e)=>{handleLogin(e)}}>Ingresar</button>
+                <button onClick={(e)=>{handleGoogle(e)}}>Ingresar con Google</button>
               </section>
           </form>
         </section>

@@ -2,20 +2,20 @@
 import { useContext, useState, useEffect } from "react";
 import { DataContext } from "../Context/Dataprovider";
 import Styles from "./Styles2/Sweet.module.css"
+import icon from "../assets/Icons/carrito2.png"
 
 export function Sweet() {
 
     const [productSweet,setProductSweet] = useState([]);
     const value = useContext(DataContext);
     const [productos] = value.productos
-    console.log(productos)
+    const isloggedin = localStorage.getItem('isLoggedIn');
 
     const addCarrito = value.addCarrito;
 
     useEffect(()=>{
         const elementos = productos.filter((e)=>e.id>6 && e.id <= 9);
         setProductSweet(elementos);
-      console.log(productSweet)
     },[productos])
        
 
@@ -32,8 +32,8 @@ export function Sweet() {
                     </article>
 
                     <article  className={Styles["container_carrito"]}>
-                        <h3>${product.precio}</h3>
-                        <button onClick={() => addCarrito(product.id)}>Agregar</button>
+                        <h3>${product.precio} K</h3>
+                        {isloggedin ? <button onClick={() => addCarrito(product.id)}><img src={icon} alt="icon" /></button>:<></>}
                     </article>
                 </section>
                 ))} 

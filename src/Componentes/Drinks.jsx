@@ -2,27 +2,22 @@
 import { useContext, useState, useEffect } from "react";
 import { DataContext } from "../Context/Dataprovider";
 import Styles from "./Styles2/Drinks.module.css"
+import icon from "../assets/Icons/carrito3.png"
 
 export function Drinks() {
 
     const [productDrinks,setProductDrinks] = useState([]);
     const value = useContext(DataContext);
     const [productos] = value.productos
-    console.log(productos)
+    const isloggedin = localStorage.getItem('isLoggedIn');
 
     const addCarrito = value.addCarrito;
 
     useEffect(()=>{
         const elementos = productos.filter((e)=>e.id>3 && e.id <= 6);
         setProductDrinks(elementos);
-      console.log(productDrinks)
     },[productos])
 
-    // let id = "";
-    // productos.map((item) => {
-    // id = id + item.id + ", ";
-    // return item;
-    // });
 
   return (
     <section className={Styles["container-products"]}>
@@ -37,8 +32,8 @@ export function Drinks() {
                     </article>
 
                     <article  className={Styles["container_carrito"]}>
-                        <h3>${productD.precio}</h3>
-                        <button onClick={() => addCarrito(productD.id)}>Agregar</button>
+                        <h3>${productD.precio} k</h3>
+                        {isloggedin ? <button className="iconos" onClick={() => addCarrito(productD.id)}><img src={icon} alt="icon" /></button>: <></>}    
                     </article>
                 </section>
             ))}      

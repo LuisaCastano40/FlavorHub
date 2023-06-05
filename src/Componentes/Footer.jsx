@@ -1,8 +1,5 @@
 import Styles from "./Styles2/Footer.module.css"
-import img1 from "../assets/Icons/Instagram.png"
-import img2 from "../assets/Icons/facebook.png"
-import img3 from "../assets/Icons/whatsapp.png"
-
+import { BoxIconElement } from "boxicons"
 
 export function Footer() {
 
@@ -10,14 +7,14 @@ export function Footer() {
         return (
             <>
                 <section className={Styles["footer__icons"]}>
-                    <article className={["footer--icon"]}>   
-                    <img className={Styles["images"]} src={img1} alt="instagram" />
+                    <article className={Styles["footer--icon"]}>
+                    <a href="https://www.instagram.com/anam_artem/"><box-icon className={Styles["icon"]} type='logo' name='instagram'></box-icon></a>   
                     </article>
-                    <article className={["footer--icon"]}>
-                    <img className={Styles["images"]} src={img2} alt="facebook" />
+                    <article className={Styles["footer--icon"]}>
+                    <a href="https://www.facebook.com/sperezpuerta"><box-icon className={Styles["icon"]} name='facebook' type='logo' ></box-icon></a>
                     </article>
-                    <article className={["footer--icon"]}>
-                    <img className={Styles["images"]} src={img3} alt="whatsapp" />
+                    <article className={Styles["footer--icon"]}>
+                    <a href="https://api.whatsapp.com/send?phone=%2B573194970214&text=%C2%BFEn+qu%C3%A9+te+puedo+ayudar%3F"><box-icon className={Styles["icon"]} name='whatsapp' type='logo' ></box-icon></a>
                     </article>
                 </section>
                 <section className={Styles["footer__sentence"]}>

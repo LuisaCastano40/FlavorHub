@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital@1&family=Kanit:wght@800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;1,400&family=Inter:wght@200;300;400;500;600&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Montserrat:wght@100;800&family=Poltawski+Nowy:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root{
+    --color1:#590424;
+    --color2:#D6D4E0;
+    --color3:white;
+    --color4:#B6DCE3;
+    --color5:#F8F8D7;
+    --color6:#85C6A3;
+    --color7:#DF7B67;
+    --color8:#1585AC;
+    --color9:#9B6612;
+    --color10:#BF506E;
+    --largo:90%;
+    --largo_cuadritos:25%;
+    --margen_cuadritos:2%;
+    --margen_contenedores:2%
+}
+
+
+.cuadritos-arriba{
+    font-family: 'oswald', sans-serif;
+    font-size: 1.3rem;
+    font-weight:lighter;
+    margin: 0px 100px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    background-color: var(--color3);
+}
+
+.cuadritos-1{
+    background-color: var(--color9);
+    width: var(--largo_cuadritos);
+    text-align: center;
+    margin: var(--margen_cuadritos);
+    color: white;
+    font-weight: bold;
+}
+
+.cuadritos-2{
+    background-color: var(--color8);
+    width: var(--largo_cuadritos);
+    text-align: center;
+    margin: var(--margen_cuadritos);
+    color: white;
+    font-weight: bold;
+}
+
+.cuadritos-3{
+    background-color: var(--color10);
+    width: var(--largo_cuadritos);
+    text-align: center;
+    margin: var(--margen_cuadritos);
+    color: white;
+    font-weight: bold;
+}
+
+.cuadritos-4{
+    background-color: var(--color1);
+    width: var(--largo_cuadritos);
+    text-align: center;
+    margin: var(--margen_cuadritos);
+    color: white;
+    font-weight: bold;
+}
+
+.contenedor__grafica-lineas{
+    border: solid var(--color1);
+    padding: 5%;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.grafica-lineas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+}
+
+.imagen-lineas{
+    width: 100%;
+}
+.contenedor__grgaficas2{
+    border: solid var(--color1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    gap: 30px;
+}
+.contenedor__grafica-barras{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* 
+
+
+.contenedor-datos{
+    border: solid;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.grafica-barras{
+    border: solid;
+    width: 50%;
+    height: 25%;
+}
+
+.imagen-barras{
+    border: solid;
+    margin: 5%;
+    width: var(--largo);
+}
+
+.procent-buscadores{
+    width: 100%;
+    border: solid;
+}
+
+.grafica-torta{
+    margin: 5%;
+    border: solid;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.imagen-torta{
+    border: solid;
+    margin-top: 5%;
+    height: 100%;
+    width: 100%;
+}
+
+ */
+ .contenedor__usuarios{
+    margin: 20px 40px;
+ }
+
+ tr{
+    box-shadow: 0 0.5rem 1rem rgba(108, 108, 108, 0.5);
+    border: none;
+    border-radius: 20px;
+    background-color: #1586ac1e;
+}
+
+.tabla-usuarios{
+    text-align: center;
+    width: 100%;
+}
+
+.tabla-vendidos{
+    text-align: center;
+    width: 100%;
+    
+}
+
+.foto{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+
+
+

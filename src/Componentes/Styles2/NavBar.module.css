@@ -2,14 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;1,400&family=Inter:wght@200;300;400;500;600&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Montserrat:wght@100;800&family=Oswald:wght@200;300;400&family=Poltawski+Nowy:ital,wght@0,400;0,500;1,400&display=swap');
 
 :root{
-    --color1:rgb(89, 4, 36);
+    --color1:#590424;
     --color2:#D6D4E0;
     --color3:white;
     --color4:#B6DCE3;
     --color5:#F8F8D7;
     --color6:#85C6A3;
     --color7:#DF7B67;
+    --color8:#1585AC;
+    --color9:#9B6612;
+    --color10:#BF506E;
 }
+
+
 .contenedor__navbar{
     display: flex;
     flex-direction: row;
@@ -21,6 +26,7 @@
     padding: 0 80px;
     /*position: fixed;*/
     z-index: 1000;
+    color: var(--color1);
 }
 .NavBar--Logo {
     margin: 10px;
@@ -54,6 +60,7 @@
     position: relative;
     font-family: 'Oswald';
     font-weight: 100;
+    background-color: var(--color2);
 }
 .il-list:hover{
     background-color: white;
@@ -75,7 +82,6 @@
     left: 0;
     width: 200px;
     display: none;
-    background-color: var(--color2);
 }
 
 .il-list:hover > ul{
@@ -104,4 +110,74 @@
 }
 .carrito img{
     width: 60px;
+}
+.NavBar__open{
+    fill: var(--color1);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+.NavBar__open box-icon{
+    width: 40px;
+    height: 50px;
+    margin: 0 0px 0 0px;
+}
+
+/* -------------RESPONSIVE------------- */
+
+@media (max-width:1000px){
+    .contenedor__navbar{
+        position: relative;
+        padding: 0 40px;
+    }
+    .NavBar__open{
+        visibility: visible;
+        opacity: 1;
+    }
+    .NavBar__open box-icon{
+        width: 40px;
+        height: 40px;
+        margin: 0 30px 0 0px;
+        visibility: visible;
+        opacity: 1;
+    }
+    .navbar{
+        transform: scaleY(0); 
+        opacity: 0;
+        padding: 1rem 2rem;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        height: auto;
+        background-color:var(--color2); 
+        border-top: 1px solid var(--color1);
+        box-shadow: 0 0.5rem 1rem #bdbcbc;
+        transform-origin: top;
+    }
+    .navbar_show{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        height: auto;
+        background-color:var(--color2); 
+        border-top: 1px solid var(--color1);
+        box-shadow: 0 0.5rem 1rem #bdbcbc;
+        transform-origin: top;
+        transform: scaleY(1); 
+        opacity: 1;
+    }
+    .navbar_show .ul-list {
+        display: block;
+        margin: 2rem 0;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;  
+    }
+    .navbar_show .ul-list .il-list{
+        border-bottom: 1px solid var(--color1);
+        width: 500px;
+    }
+    
 }

@@ -57,9 +57,9 @@ export function Carrito() {
         <section className={Styles[show1]}>
             <section className={Styles[show2]}>
                 <article className={Styles["carrito__close"]} onClick={falseMenu}>
-                <box-icon name="x"></box-icon>
+                    <box-icon name="x"></box-icon>
                 </article>
-                <h2>Su carrito</h2>
+                <h2 className={Styles["titulo"]}>Contenedor de futuro placer</h2>
                 <div className={Styles[show3]}>
                     <h3>¿Listo para saborear la audacia? Nuestros productos culinarios te transportarán a la época de los aristócratas más atrevidos. Sin límites, sin remordimientos. Solo placer decadente.</h3>
                 </div>
@@ -69,8 +69,8 @@ export function Carrito() {
                         <article className={Styles["carrito__item"]}>
                             <img src={producto.url} alt="prueba"/>
                             <div>
-                                <h3>{producto.nombre}</h3>
-                                <p className={Styles["price"]}>${producto.precio}</p>
+                                <h3 className={Styles["titulo2"]}>{producto.nombre}</h3>
+                                <p className={Styles["price"]}>${producto.precio} K</p>
                             </div>
                             <div className={Styles["icons"]}>
                             <box-icon type='solid' name='up-arrow-circle' onClick={()=>{suma(producto.id)}}></box-icon>
@@ -84,8 +84,8 @@ export function Carrito() {
                     </article>
                 )) }
                     <article className={Styles["carrito__footer"]}>
-                        <h3>Total: ${total}</h3>
-                        <button className={Styles["btn"]}>Payment</button>
+                        <h3 className={Styles["titulo2"]}>Total: ${total} k</h3>
+                        <button className={Styles["btn"]}>Ir a Pagar</button>
                     </article>
                 
             </section>
