@@ -1,6 +1,5 @@
 //Nos importa el ReactRouter
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
 //Importar Nuestras páginas
 import Home from './Pages/Home';
